@@ -6,7 +6,6 @@
     <meta name="description" content="Thinking Scrap">
     <meta name="author" content="Devcrud">
     <title>Thinking Scrap</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + LeadMark main styles -->
@@ -123,7 +122,7 @@
                         <div class="outer-circle">
                             <div class="inner-circle">
                                 <div class="inner-text">
-                                    <label class="inner-circle-text">58.5</label> <br> Min
+                                    <label class="inner-circle-text" id="facebook-usage">58.5</label> <br> Min
                                 </div>
                             </div>
                         </div>
@@ -135,7 +134,7 @@
                         <div class="outer-circle">
                             <div class="inner-circle">
                                 <div class="inner-text">
-                                    <label class="inner-circle-text">8</label> <br> Billion
+                                    <label class="inner-circle-text" id="facebook-views">8</label> <br> Billion
                                 </div>
                             </div>
                         </div>
@@ -147,7 +146,7 @@
                         <div class="outer-circle">
                             <div class="inner-circle">
                                 <div class="inner-text">
-                                    <label class="inner-circle-text">59%</label> <br> Engagment
+                                    <label class="inner-circle-text" id="engagement">59</label>% <br> Engagment
                                 </div>
                             </div>
                         </div>
@@ -162,7 +161,7 @@
                         <div class="outer-circle">
                             <div class="inner-circle">
                                 <div class="inner-text">
-                                    <label class="inner-circle-text">54%</label> <br> People
+                                    <label class="inner-circle-text" id="video-content">54</label>% <br> People
                                 </div>
                             </div>
                         </div>
@@ -174,7 +173,7 @@
                         <div class="outer-circle">
                             <div class="inner-circle">
                                 <div class="inner-text">
-                                    <label class="inner-circle-text">1200%</label> <br> Shares
+                                    <label class="inner-circle-text" id="image-text-content">1200</label>% <br> Shares
                                 </div>
                             </div>
                         </div>
@@ -186,7 +185,7 @@
                         <div class="outer-circle">
                             <div class="inner-circle">
                                 <div class="inner-text">
-                                    <label class="inner-circle-text">27%</label> <br> Brand Lift
+                                    <label class="inner-circle-text" id="brand-awareness">27</label>% <br> Brand Lift
                                 </div>
                             </div>
                         </div>
@@ -650,10 +649,6 @@
 
     <!-- LeadMark js -->
     <script src="assets/js/leadmark.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-      defer
-    ></script>
 
     <script>
         // Initialize and add the map
@@ -677,25 +672,63 @@
 
     // window.initMap = initMap;
 
-    let mybutton = document.getElementById("myBtn");
+        let mybutton = document.getElementById("myBtn");
 
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-    window.onload = function() {scrollFunction()};
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        window.onload = function() {scrollFunction()};
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
-    }
 
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        var speed = 20;
+
+        /* Call this function with a string containing the ID name to
+        * the element containing the number you want to do a count animation on.*/
+        function incEltNbr(id) {
+            elt = document.getElementById(id);
+            endNbr = Number(document.getElementById(id).innerHTML);
+            
+            incNbrRec(0, endNbr, elt);
+        }
+
+        /*A recursive function to increase the number.*/
+        function incNbrRec(i, endNbr, elt) {
+            if (i <= endNbr) {
+                elt.innerHTML = i;
+                setTimeout(function() {//Delay a bit before calling the function again.
+                incNbrRec(i + 1, endNbr, elt);
+                }, speed);
+            }
+        }
+
+        /*Function called on button click*/
+        function incNbr(){
+            incEltNbr("facebook-usage");
+            incEltNbr("facebook-views");
+            incEltNbr("engagement");
+            incEltNbr("video-content");
+            incEltNbr("brand-awareness");
+        }
+
+        incEltNbr("facebook-usage");
+        incEltNbr("facebook-views");
+        incEltNbr("engagement");
+        incEltNbr("video-content");
+        incEltNbr("brand-awareness");
+
+
     </script>
 
 </body>
