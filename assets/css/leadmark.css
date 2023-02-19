@@ -11769,8 +11769,81 @@ textarea.form-control {
   padding: 12px;
   border-radius: 4px;
   z-index: 9999;
+  border: 1px solid white;
 }
 
 #myBtn:hover {
   background-color: #EFB58D;
+}
+
+.outer-circle{
+  text-align: center; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  align-content: center;
+}
+
+.inner-circle{
+  width: 150px; 
+  height: 150px; 
+  background-color: white; 
+  border-radius: 50%; 
+  text-align: center; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  align-content: center;
+  border: 1px solid var(--red);
+  color: rgb(152, 17, 10);
+}
+
+.inner-circle-text{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.rectangle{
+  position: relative;
+  background-color: var(--red); 
+  color: white; 
+  text-align: center; 
+  padding: 10px 10px 10px 10px;
+  margin-top: -20px;
+  z-index: 999;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #office-map{
+    left: -388px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #office-map{
+    left: -388px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #office-map{
+    left: -200px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #office-map{
+    left: 0px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #office-map{
+    left: 0px;
+  }
 }
