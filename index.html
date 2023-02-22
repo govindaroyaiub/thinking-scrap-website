@@ -880,7 +880,7 @@
             if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
                 // the element is visible, do something
                 var tl2 = gsap.timeline();
-                var rule = CSSRulePlugin.getRule(".bar-inner:after");
+                var barTexts = CSSRulePlugin.getRule(".bar-inner:after");
                 tl2
                 .add('f1', '+=1')
                 .to('.bar-share', {duration: 2, width: '80%', ease: 'power2.out'}, 'f1')
@@ -889,7 +889,7 @@
                 .to('.bar-brandLift', {duration: 2, width: '20%', ease: 'power2.out'}, 'f1')
                 .to('.bar-min', {duration: 2, width: '50%', ease: 'power2.out'}, 'f1')
                 .to('.bar-billion', {duration: 2, width: '99%', ease: 'power2.out'}, 'f1')
-                .to(rule, {duration: 0.5, opacity: 1, ease: 'power2.out'}, 'f1+=1.5')
+                .to(barTexts, {duration: 0.5, opacity: 1, ease: 'power2.out'}, 'f1+=1.5')
             } else {
                 // the element is not visible, do something else
                 // alert('no');
