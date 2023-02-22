@@ -61,7 +61,7 @@
     <!-- Page Header -->
     <header class="header">
         <div class="overlay" style="text-transform: uppercase; text-align: center;">
-            <h1 class="subtitle" style="transform: scale(0);">We tell stories</h1>
+            <h1 class="subtitle" style="transform: scale(1.75); opacity: 0;">We tell stories</h1>
             <h1 class="title" style="transform: translateY(30px); opacity: 0;">Make audience visualize</h1>
             <h1 class="title" style="transform: translateY(30px); opacity: 0;">Your Brand Identify</h1>
         </div>
@@ -937,7 +937,7 @@
             const tl = gsap.timeline();
 
             tl
-            .to('.subtitle', {duration: 0.75, scale: 1, ease: 'power2.out'}, '+=0.25')
+            .to('.subtitle', {duration: 0.75, scale: 1, opacity: 1, ease: 'power2.out'}, '+=0.25')
             .to('.title', {duration: 1, y: 0, opacity: 1, ease: 'power2.out', stagger: 0.5}, '+=.15')
         };
 
