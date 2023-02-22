@@ -12872,6 +12872,17 @@ textarea.form-control {
   visibility: visible;
 }
 
+
+.portfolio-section .summary-container {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 10px -5px;
+  overflow: hidden;
+  border-radius: 0;
+  text-align: center;
+}
+
 #map {
   height: 400px;
   /* The height is 400 pixels */

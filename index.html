@@ -347,23 +347,26 @@
             <h6 class="section-title text-center">Our Works</h6>
             <h6 class="section-subtitle mb-5 text-center">New stunning projects for our amazing clients</h6>
             <div class="filters">
-                <a href="#" data-filter=".new" class="active">
+                <a href="#" data-filter=".new" class="active" onclick="client1()">
                     BRAC
                 </a>
-                <a href="#" data-filter=".advertising">
+                <a href="#" data-filter=".advertising" onclick="client2()">
                     Bkash
                 </a>
-                <a href="#" data-filter=".branding">
+                <a href="#" data-filter=".branding" onclick="client3()">
                     Winger
                 </a>
-                <a href="#" data-filter=".web">
+                <a href="#" data-filter=".web" onclick="client4()">
                     UNDP
                 </a>
-                <a href="#" data-filter=".web">
+                <a href="#" data-filter=".web" onclick="client5()">
                     Another
                 </a>
             </div>
-            <div class="portfolio-container"> 
+            <div class="summary-container">
+                <span id="client-summary">This is BRAC project Summary</span>
+            </div>
+            <div class="portfolio-container">
                 <div class="col-md-6 col-lg-4 web new">
                     <div class="portfolio-item">
                         <img src="assets/imgs/web-1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
@@ -922,6 +925,38 @@
         incEltNbr("engagement");
         incEltNbr("video-content");
         incEltNbr("brand-awareness");
+
+        var client1Summary = "This is client 1 summary.";
+        var client2Summary = "This is client 2 summary.";
+        var client3Summary = "This is client 3 summary.";
+        var client4Summary = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+        var client5Summary = "HAKUNA MATATA. LIFE IS A MYSTERY. JOINT KHAITE MON CHAY";
+
+
+        function client1(){
+            var clientSummary = document.getElementById('client-summary');
+            clientSummary.innerHTML = client1Summary;
+        }
+
+        function client2(){
+            var clientSummary = document.getElementById('client-summary');
+            clientSummary.innerHTML = client2Summary;
+        }
+
+        function client3(){
+            var clientSummary = document.getElementById('client-summary');
+            clientSummary.innerHTML = client3Summary;
+        }
+
+        function client4(){
+            var clientSummary = document.getElementById('client-summary');
+            clientSummary.innerHTML = client4Summary;
+        }
+
+        function client5(){
+            var clientSummary = document.getElementById('client-summary');
+            clientSummary.innerHTML = client5Summary;
+        }
     </script>
 
 </body>
